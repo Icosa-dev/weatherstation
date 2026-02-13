@@ -36,7 +36,7 @@ public class WeatherDisplayController {
     // Initializer method to start the loop
     public static void init() {
         timeline = new Timeline(
-            new KeyFrame(Duration.minutes(15), e -> updateWeather())
+            new KeyFrame(Duration.seconds(1), e -> updateWeather())
         );
 
         timeline.setCycleCount(Animation.INDEFINITE);
@@ -45,6 +45,7 @@ public class WeatherDisplayController {
 
     // Loop to update weather data
     private static void updateWeather() {
+        System.out.println("Printing from WeatherDisplayController...");
         // TODO: Implement this
     }
 
