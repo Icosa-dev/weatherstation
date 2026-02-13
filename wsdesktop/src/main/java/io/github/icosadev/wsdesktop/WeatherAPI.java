@@ -1,15 +1,12 @@
 /*
- * Copyright (c) 2025 LJC
+ * Copyright (c) 2026 LJC
  *
- * SPDX-License-Identifier: GPL3-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 package io.github.icosadev.wsdesktop;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -18,7 +15,7 @@ import org.json.simple.parser.JSONParser;
  * https://open-meteo.com/en/docs#hourly_parameter_definition
  */
 
-public class WeatherAPI {
+public class WeatherAPI extends WebAPI {
     public static WeatherData getWeather(double longitude, double latitude) {
         try {
             String url = "https://api.open-meteo.com/v1/forecast?latitude=" + latitude +
@@ -53,42 +50,6 @@ public class WeatherAPI {
                     windSpeed,
                     windDirection);
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    private static HttpURLConnection fetchApiResponse(String urlString) {
-        try {
-            @SuppressWarnings("deprecation")
-            URL url = new URL(urlString);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-
-            conn.setRequestMethod("GET");
-
-            return conn;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    private static String readApiResponse(HttpURLConnection apiConnection) {
-        try {
-            StringBuilder resultJson = new StringBuilder();
-
-            Scanner scanner = new Scanner(apiConnection.getInputStream());
-
-            while (scanner.hasNext()) {
-                resultJson.append(scanner.nextLine());
-            }
-
-            scanner.close();
-
-            return resultJson.toString();
-        } catch (IOException e) {
             e.printStackTrace();
         }
 
