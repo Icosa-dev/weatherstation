@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2025 LJC
+ * Copyright (c) 2026 LJC
  *
- * SPDX-License-Identifier: GPL3-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 package io.github.icosadev.wsdesktop;
@@ -13,24 +13,30 @@ import javafx.util.Duration;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
+import javafx.scene.text.Text;
 
 public class WeatherDisplayController {
     @FXML
     private static String city;
     private static Timeline timeline;
     
-    private static Label titelLabel;
+    private static Label titleLabel;
+
+    // TODO: I believe these can be removed since
+    // the controller doesn't do anything to them.
     private static TitledPane temperaturePane;
     private static TitledPane humidityPane;
     private static TitledPane pressurePane;
-    private static TitledPane windSpeedPane; 
+    private static TitledPane windSpeedPane;
+    
+    private static Text temperatureText;
+    private static Text humidityText;
+    private static Text pressureText;
 
     // Initializer method to start the loop
     public static void init() {
         timeline = new Timeline(
-            // DO NOT HAVE IT UPDATE EVERY SECOND
-            // when it actually calls the API
-            new KeyFrame(Duration.seconds(1), e -> updateWeather())
+            new KeyFrame(Duration.minutes(15), e -> updateWeather())
         );
 
         timeline.setCycleCount(Animation.INDEFINITE);
@@ -39,7 +45,7 @@ public class WeatherDisplayController {
 
     // Loop to update weather data
     private static void updateWeather() {
-        System.out.println("TEST");
+        // TODO: Implement this
     }
 
     public static void setCity(String aCity) {

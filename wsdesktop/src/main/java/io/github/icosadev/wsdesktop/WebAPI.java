@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2026 LJC
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 package io.github.icosadev.wsdesktop;
 
 import java.io.IOException;
@@ -5,7 +11,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
-public class WebAPI {
+public abstract class WebAPI {
     protected static HttpURLConnection fetchApiResponse(String urlString) {
         try {
             @SuppressWarnings("deprecation")
