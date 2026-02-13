@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 LJC
+ *
+ * SPDX-License-Identifier: GPL3-or-later
+ */
+
 package io.github.icosadev.wsdesktop;
 
 /* NOTE: For API specifications, see:
@@ -10,7 +16,7 @@ public class WeatherData {
     private double windSpeed; // wind_speed_10m (km/h)
     private double windDirection; // wind_direction_10m (deg.)
 
-    WeatherData(
+        WeatherData(
             double temperature,
             double relativeHumidity,
             double pressure,

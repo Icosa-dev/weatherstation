@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 LJC
+ *
+ * SPDX-License-Identifier: GPL3-or-later
+ */
+
 package io.github.icosadev.wsdesktop;
 
 import javafx.application.Application;
