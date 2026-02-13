@@ -12,7 +12,6 @@ import javafx.animation.Timeline;
 import javafx.util.Duration;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TitledPane;
 import javafx.scene.text.Text;
 
 public class WeatherDisplayController {
@@ -22,13 +21,6 @@ public class WeatherDisplayController {
     
     private static Label titleLabel;
 
-    // TODO: I believe these can be removed since
-    // the controller doesn't do anything to them.
-    private static TitledPane temperaturePane;
-    private static TitledPane humidityPane;
-    private static TitledPane pressurePane;
-    private static TitledPane windSpeedPane;
-    
     private static Text temperatureText;
     private static Text humidityText;
     private static Text pressureText;
