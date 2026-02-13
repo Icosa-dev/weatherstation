@@ -4,13 +4,23 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.icosadev.wsdesktop.WeatherDisplayController">
    <children>
-      <TitledPane fx:id="humidityPane" animated="false" collapsible="false" layoutY="87.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER" />
-      <TitledPane fx:id="pressurePane" animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (mbar)" textAlignment="CENTER" />
-      <TitledPane fx:id="temperaturePane" animated="false" collapsible="false" layoutY="36.0" prefHeight="51.0" prefWidth="202.0" text="Temperature (F°/C°)" textAlignment="CENTER" />
-      <Label fx:id="titleLabel" alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Current Weather Statistics for M, D, YYYY at TT:TT in LOCATION">
+      <TitledPane fx:id="humidityPane" animated="false" collapsible="false" layoutY="87.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="humidityText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </content></TitledPane>
+      <TitledPane fx:id="pressurePane" animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (mbar)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="pressureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </content></TitledPane>
+      <TitledPane fx:id="temperaturePane" animated="false" collapsible="false" layoutY="36.0" prefHeight="51.0" prefWidth="202.0" text="Temperature (F°/C°)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="tempuratureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </content></TitledPane>
+      <Label fx:id="titleLabel" alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Current Weather Statistics for M, D, YYYY in LOCATION">
          <font>
             <Font size="16.0" />
          </font>
