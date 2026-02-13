@@ -14,7 +14,7 @@ public class WeatherDisplayController {
     private static Timeline timeline;
     
     private static Label titelLabel;
-    private static TitledPane tempuraturePane;
+    private static TitledPane temperaturePane;
     private static TitledPane humidityPane;
     private static TitledPane pressurePane;
     private static TitledPane windSpeedPane; 
