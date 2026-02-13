@@ -6,22 +6,28 @@
 
 package io.github.icosadev.wsdesktop;
 
+import java.time.LocalTime;
+
 /* NOTE: For API specifications, see:
  * https://open-meteo.com/en/docs#hourly_parameter_definition
  */
 public class WeatherData {
+    private LocalTime timeLastUpdated;
+
     private double temperature; // temperature_2m (C)
-    private double relativeHumidity; // relative_humidity_2m (%)
+    private long   relativeHumidity; // relative_humidity_2m (%)
     private double pressure; // pressure_msl_surface_pressure (hPa)
     private double windSpeed; // wind_speed_10m (km/h)
     private double windDirection; // wind_direction_10m (deg.)
 
-        WeatherData(
+    WeatherData(
             double temperature,
-            double relativeHumidity,
+            long   relativeHumidity,
             double pressure,
             double windSpeed,
             double windDirection) {
+        this.timeLastUpdated = LocalTime.now();
+        
         this.temperature = temperature;
         this.relativeHumidity = relativeHumidity;
         this.pressure = pressure;
@@ -41,11 +47,11 @@ public class WeatherData {
         this.temperature = temperature;
     }
 
-    public double getRelativeHumidity() {
+    public long getRelativeHumidity() {
         return relativeHumidity;
     }
 
-    public void setRelativeHumidity(double relativeHumidity) {
+    public void setRelativeHumidity(long relativeHumidity) {
         this.relativeHumidity = relativeHumidity;
     }
 
@@ -75,5 +81,13 @@ public class WeatherData {
 
     public void setWindDirection(double windDirection) {
         this.windDirection = windDirection;
+    }
+
+    public LocalTime getTimeLastUpdated() {
+        return timeLastUpdated;
+    }
+
+    public void setTimeLastUpdated(LocalTime timeLastUpdated) {
+        this.timeLastUpdated = timeLastUpdated;
     }
 }
