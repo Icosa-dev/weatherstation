@@ -5,11 +5,19 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TitledPane;
 
 public class WeatherDisplayController {
     @FXML
     private static String city;
     private static Timeline timeline;
+    
+    private static Label titelLabel;
+    private static TitledPane tempuraturePane;
+    private static TitledPane humidityPane;
+    private static TitledPane pressurePane;
+    private static TitledPane windSpeedPane; 
 
     // Initializer method to start the loop
     public static void init() {
