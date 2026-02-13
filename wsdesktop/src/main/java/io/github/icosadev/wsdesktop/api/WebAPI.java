@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package io.github.icosadev.wsdesktop;
+package io.github.icosadev.wsdesktop.api;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;

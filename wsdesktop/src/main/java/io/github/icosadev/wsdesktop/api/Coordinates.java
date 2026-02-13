@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package io.github.icosadev.wsdesktop;
+package io.github.icosadev.wsdesktop.api;
 
 public class Coordinates {
     public double latitude;

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package io.github.icosadev.wsdesktop;
+package io.github.icosadev.wsdesktop.api;
 
 import java.net.HttpURLConnection;
 
@@ -17,6 +17,10 @@ public class GeocodingAPI extends WebAPI {
                 city + "&count=1&language=en&format=json";
         
         try {
+            // This is similar to another code block in
+            // the WeatherAPI. Try to make it so this doesn't
+            // need to be written twice.
+            // DO NOT REPEAT YOURSELF
             HttpURLConnection apiConnection = fetchApiResponse(urlString);
 
             if (apiConnection.getResponseCode() != 200) {
