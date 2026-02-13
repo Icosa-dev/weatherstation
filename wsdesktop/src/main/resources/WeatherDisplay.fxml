@@ -5,17 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.icosadev.wsdesktop.WeatherDisplayController">
    <children>
-      <TitledPane animated="false" collapsible="false" layoutY="87.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER" />
-      <TitledPane animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (mbar)" textAlignment="CENTER" />
-      <TitledPane animated="false" collapsible="false" layoutY="36.0" prefHeight="51.0" prefWidth="202.0" text="Tempurature (F°/C°)" textAlignment="CENTER" />
-      <Label alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Current Weather Statistics for M, D, YYYY at TT:TT in LOCATION">
+      <TitledPane fx:id="humidityPane" animated="false" collapsible="false" layoutY="87.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER" />
+      <TitledPane fx:id="pressurePane" animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (mbar)" textAlignment="CENTER" />
+      <TitledPane fx:id="tempuraturePane" animated="false" collapsible="false" layoutY="36.0" prefHeight="51.0" prefWidth="202.0" text="Tempurature (F°/C°)" textAlignment="CENTER" />
+      <Label fx:id="titleLabel" alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Current Weather Statistics for M, D, YYYY at TT:TT in LOCATION">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TitledPane animated="false" collapsible="false" layoutY="189.0" prefHeight="211.0" prefWidth="202.0" text="Wind Speed (mph/kph)" textAlignment="CENTER" />
+      <TitledPane fx:id="windSpeedPane" animated="false" collapsible="false" layoutY="189.0" prefHeight="211.0" prefWidth="202.0" text="Wind Speed (mph/kph)" textAlignment="CENTER" />
    </children>
 </AnchorPane>
