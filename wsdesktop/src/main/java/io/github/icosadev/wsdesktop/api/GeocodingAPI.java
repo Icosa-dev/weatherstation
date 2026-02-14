@@ -8,6 +8,7 @@ package io.github.icosadev.wsdesktop.api;
 
 import java.net.HttpURLConnection;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -31,10 +32,12 @@ public class GeocodingAPI extends WebAPI {
             String jsonResponse = readApiResponse(apiConnection);
 
             JSONParser parser = new JSONParser();
-            JSONObject locationData = (JSONObject) parser.parse(jsonResponse);
+            JSONObject resultsJsonObject = (JSONObject) parser.parse(jsonResponse);
+            JSONArray locationData = (JSONArray) resultsJsonObject.get("results");
+            resultsJsonObject = (JSONObject) locationData.get(0);
 
-            double latitude = (double) locationData.get("latitude");
-            double longitude = (double) locationData.get("longitude");
+            double latitude = (double) resultsJsonObject.get("latitude");
+            double longitude = (double) resultsJsonObject.get("longitude");
 
             return new Coordinates(latitude, longitude);
         } catch (Exception e) {
