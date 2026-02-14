@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.icosadev.wsdesktop.App">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.icosadev.wsdesktop.Controller">
    <children>
       <TitledPane animated="false" collapsible="false" layoutY="87.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER">
          <content>
@@ -18,7 +18,7 @@
          </content></TitledPane>
       <TitledPane animated="false" collapsible="false" layoutY="36.0" prefHeight="51.0" prefWidth="202.0" text="Temperature (F°/C°)" textAlignment="CENTER">
          <content>
-            <Text fx:id="tempuratureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="temperatureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
          </content></TitledPane>
       <Label fx:id="titleLabel" alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Current Weather Statistics for M, D, YYYY in LOCATION">
          <font>
