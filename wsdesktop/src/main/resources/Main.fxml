@@ -12,7 +12,7 @@
          <content>
             <Text fx:id="humidityText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
          </content></TitledPane>
-      <TitledPane animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (mbar)" textAlignment="CENTER">
+      <TitledPane animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (hPa)" textAlignment="CENTER">
          <content>
             <Text fx:id="pressureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
          </content></TitledPane>
