@@ -35,7 +35,7 @@ public class Controller {
                 update();
 
                 timeline = new Timeline(
-                                new KeyFrame(Duration.minutes(1), e -> update()));
+                                new KeyFrame(Duration.seconds(15), e -> update()));
                 timeline.setCycleCount(Timeline.INDEFINITE);
                 timeline.play();
         }
