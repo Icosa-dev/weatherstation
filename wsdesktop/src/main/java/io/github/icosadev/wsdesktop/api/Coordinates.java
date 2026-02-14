@@ -18,4 +18,9 @@ public class Coordinates {
     public Coordinates() {
         this(0, 0);
     }
+
+    @Override
+    public String toString() {
+        return "Coordinates [latitude=" + latitude + ", longitude=" + longitude + "]";
+    }
 }
