@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2026 LJC
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
@@ -18,14 +18,18 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class Controller {
+        // Scene elements
         @FXML private Label titleLabel;
         @FXML private Text temperatureText;
         @FXML private Text humidityText;
         @FXML private Text pressureText;
 
+        // Class variables
         private static String city = "NYC";
         private Timeline timeline;
 
+        // Called when the scene is loaded. Constantly
+        // calls the update method every minute.
         @FXML
         public void initialize() {
                 update();
@@ -36,6 +40,7 @@ public class Controller {
                 timeline.play();
         }
 
+        // Updates weather data in each scene element
         private void update() {
                 System.out.println("Running updateWeather method for " + city + "...");
 

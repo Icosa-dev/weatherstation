@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2026 LJC
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
@@ -11,9 +11,34 @@ import java.net.HttpURLConnection;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+/**
+ * Static class for converting between geographic co-ordinates and
+ * meteorological data. 
+ * 
+ * <p>
+ * This class extends {@code WebAPI} to handle underlying HTTP requests.
+ * It uses the Open-Meteo Weather API as a backend.
+ * </p>
+ * 
+ * @author LJC
+ * @since 1.0
+ * @see {@link WebAPI}
+ */
 public class WeatherAPI extends WebAPI {
     // TODO: Make this take a Coordinate class input instead of seperate
     // doubles
+
+    /**
+     * Retrieves the meteorological data of a location from its co-ordinates.
+     * 
+     * @param longitude the longitude of the location
+     * @param latitude the latitude of the location
+     * @return the meteorological data of the location specified by the co-ordinates
+     *         or {@code null} if the API request fails
+     * 
+     * @since 1.0
+     * @see {@link WeatherData}
+     */
     public static WeatherData getWeather(double longitude, double latitude) {
         try {
             String url = "https://api.open-meteo.com/v1/forecast?latitude=" 

@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2026 LJC
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
@@ -12,7 +12,27 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+/**
+ * Static class for converting between cities and geographic co-ordinates.
+ * 
+ * <p>
+ * This class extends {@code WebAPI} to handle underlying HTTP requests.
+ * It uses the Open-Meteo Geocoding API as a backend.
+ * </p>
+ * 
+ * @author LJC
+ * @since 1.0
+ * @see {@link WebAPI}
+ */
 public class GeocodingAPI extends WebAPI {
+    /**
+     * Retrieves the geographic co-ordinates of a city.
+     * 
+     * @param city the name of the city
+     * @return the co-ordinates of the city,
+     *         or {@code null} if the API request fails
+     * @since 1.0
+     */
     public static Coordinates getCoordinates(String city) {
         String urlString = "https://geocoding-api.open-meteo.com/v1/search?name=" +
                 city + "&count=1&language=en&format=json";
