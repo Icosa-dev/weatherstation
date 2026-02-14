@@ -6,28 +6,26 @@
 
 package io.github.icosadev.wsdesktop.api;
 
-import java.time.LocalTime;
-
 /* NOTE: For API specifications, see:
  * https://open-meteo.com/en/docs#hourly_parameter_definition
  */
 public class WeatherData {
-    private LocalTime timeLastUpdated;
-
+    private String time;
     private double temperature; // temperature_2m (C)
     private long   relativeHumidity; // relative_humidity_2m (%)
     private double pressure; // pressure_msl_surface_pressure (hPa)
     private double windSpeed; // wind_speed_10m (km/h)
-    private double windDirection; // wind_direction_10m (deg.)
+    private long windDirection; // wind_direction_10m (deg.)
 
     WeatherData(
+            String time,
             double temperature,
             long   relativeHumidity,
             double pressure,
             double windSpeed,
-            double windDirection) {
-        this.timeLastUpdated = LocalTime.now();
+            long windDirection) {
         
+        this.time = time;
         this.temperature = temperature;
         this.relativeHumidity = relativeHumidity;
         this.pressure = pressure;
@@ -75,19 +73,25 @@ public class WeatherData {
         this.windSpeed = windSpeed;
     }
 
-    public double getWindDirection() {
+    public long getWindDirection() {
         return windDirection;
     }
 
-    public void setWindDirection(double windDirection) {
+    public void setWindDirection(long windDirection) {
         this.windDirection = windDirection;
     }
 
-    public LocalTime getTimeLastUpdated() {
-        return timeLastUpdated;
+    public String getTime() {
+        return time;
     }
 
-    public void setTimeLastUpdated(LocalTime timeLastUpdated) {
-        this.timeLastUpdated = timeLastUpdated;
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    @Override
+    public String toString() {
+        return "WeatherData [time=" + time + ", temperature=" + temperature + ", relativeHumidity=" + relativeHumidity
+                + ", pressure=" + pressure + ", windSpeed=" + windSpeed + ", windDirection=" + windDirection + "]";
     }
 }
