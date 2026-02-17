@@ -19,10 +19,18 @@ import javafx.util.Duration;
 
 public class Controller {
         // Scene elements
-        @FXML private Label titleLabel;
-        @FXML private Text temperatureText;
-        @FXML private Text humidityText;
-        @FXML private Text pressureText;
+        @FXML
+        private Label titleLabel;
+        @FXML
+        private Text temperatureText;
+        @FXML
+        private Text humidityText;
+        @FXML
+        private Text pressureText;
+        @FXML
+        private Text windSpeedText;
+        @FXML
+        private Text windDirectionText;
 
         // Class variables
         private static String city = "NYC";
@@ -34,8 +42,9 @@ public class Controller {
         public void initialize() {
                 update();
 
+                // TODO: Make update delay controllable by user
                 timeline = new Timeline(
-                                new KeyFrame(Duration.seconds(15), e -> update()));
+                                new KeyFrame(Duration.minutes(1), e -> update()));
                 timeline.setCycleCount(Timeline.INDEFINITE);
                 timeline.play();
         }
@@ -55,6 +64,12 @@ public class Controller {
                                 + "/" + weather.getTemperature());
 
                 humidityText.setText("" + weather.getRelativeHumidity());
+
                 pressureText.setText("" + weather.getPressure());
+
+                windSpeedText.setText(weather.getWindSpeed()
+                                + "/" + weather.getWindSpeedMph());
+
+                windDirectionText.setText("" + weather.getWindDirection());
         }
 }
