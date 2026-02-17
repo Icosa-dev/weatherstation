@@ -8,23 +8,31 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.icosadev.wsdesktop.Controller">
    <children>
-      <TitledPane animated="false" collapsible="false" layoutY="87.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER">
-         <content>
-            <Text fx:id="humidityText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </content></TitledPane>
-      <TitledPane animated="false" collapsible="false" layoutY="138.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (hPa)" textAlignment="CENTER">
-         <content>
-            <Text fx:id="pressureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </content></TitledPane>
-      <TitledPane animated="false" collapsible="false" layoutY="36.0" prefHeight="51.0" prefWidth="202.0" text="Temperature (F°/C°)" textAlignment="CENTER">
-         <content>
-            <Text fx:id="temperatureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </content></TitledPane>
       <Label fx:id="titleLabel" alignment="CENTER" prefHeight="36.0" prefWidth="600.0" text="Current Weather Statistics for M, D, YYYY in LOCATION">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TitledPane animated="false" collapsible="false" layoutY="189.0" prefHeight="211.0" prefWidth="202.0" text="Wind Speed (mph/kph)" textAlignment="CENTER" />
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="199.0" layoutY="200.0" prefHeight="51.0" prefWidth="202.0" text="Relative Humidity (%)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="humidityText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </content></TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="398.0" layoutY="200.0" prefHeight="51.0" prefWidth="202.0" text="Pressure (hPa)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="pressureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </content></TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutY="200.0" prefHeight="51.0" prefWidth="202.0" text="Temperature (F°/C°)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="temperatureText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </content></TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutY="36.0" prefHeight="167.0" prefWidth="302.0" text="Wind Speed (mph/kph)" textAlignment="CENTER">
+         <content>
+            <Text fx:id="windSpeedText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" />
+         </content></TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="302.0" layoutY="36.0" prefHeight="167.0" prefWidth="291.0" text="Wind Direction (°)" textAlignment="CENTER" AnchorPane.topAnchor="36.0">
+         <content>
+            <Text fx:id="windDirectionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="22.13671875" />
+         </content>
+      </TitledPane>
    </children>
 </AnchorPane>
