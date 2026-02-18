@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package io.github.icosadev.wsdesktop;
+package io.github.icosadev.weatherstation;
 
-import io.github.icosadev.wsdesktop.api.Coordinates;
-import io.github.icosadev.wsdesktop.api.GeocodingAPI;
-import io.github.icosadev.wsdesktop.api.WeatherAPI;
-import io.github.icosadev.wsdesktop.api.WeatherData;
+import io.github.icosadev.weatherstation.api.Coordinates;
+import io.github.icosadev.weatherstation.api.GeocodingAPI;
+import io.github.icosadev.weatherstation.api.WeatherAPI;
+import io.github.icosadev.weatherstation.api.WeatherData;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;

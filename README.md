@@ -1,3 +1,4 @@
-# weatherstation
+# WSDesktop
 
-The source code for the software running on my personal DIY weather station.
+WSDesktop is the desktop GUI for displaying information collected from
+my personal weather station. It is implemented in Java with JavaFX.

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.icosadev</groupId>
-    <artifactId>wsdesktop</artifactId>
+    <artifactId>weatherstation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -53,7 +53,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>io.github.icosadev.wsdesktop.App</mainClass>
+                    <mainClass>io.github.icosadev.weatherstation.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>

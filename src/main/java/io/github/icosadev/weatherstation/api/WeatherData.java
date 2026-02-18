@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package io.github.icosadev.wsdesktop.api;
+package io.github.icosadev.weatherstation.api;
 
 /**
  * Represents a single weather observation retrieved from the Open-Meteo API.

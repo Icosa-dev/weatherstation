@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package io.github.icosadev.wsdesktop.api;
+package io.github.icosadev.weatherstation.api;
 
 import java.net.HttpURLConnection;
 
